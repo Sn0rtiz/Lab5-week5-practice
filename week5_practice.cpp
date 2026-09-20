@@ -80,7 +80,11 @@ int main() {
 
     // TODO (Part E): Use largerValue with two int values and with two double values.
     // Print each result with a descriptive English label.
-
+    int int1 = 10, int2 = 20;   
+    double double1 = 10.5, double2 = 20.5;
+    cout << "--- Function template ---" << endl;
+    cout << "Larger int value: " << largerValue(int1, int2) << endl;
+    cout << "Larger double value: " << largerValue(double1, double2) << endl;
 
     return 0;
 }

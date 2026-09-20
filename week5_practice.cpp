@@ -53,6 +53,11 @@ class LimitedEvent : public CampusEvent
 // TODO (Part D): Write a function template named largerValue.
 // It receives two const references of the same generic type and returns the larger value.
 // Do not write separate int and double versions.
+template <typename T>
+    T largerValue(const T& value1, const T& value2) 
+    {
+    return (value1 > value2) ? value1 : value2;
+    }
 
 int main() {
     CampusEvent openEvent("Coding Club Meeting");
@@ -65,8 +70,16 @@ int main() {
     // TODO (Part E): Create a LimitedEvent with dummy data.
     // TODO (Part E): Store the addresses of openEvent and your LimitedEvent
     // in two CampusEvent pointers. Call printDetails() through both pointers.
+    CampusEvent* eventPtr1 = &openEvent;
+    LimitedEvent limitedEvent("Workshop", 25);
+    CampusEvent* eventPtr2 = &limitedEvent;
+
+    cout << "--- Derived event ---" << endl;
+    eventPtr1->printDetails();
+    eventPtr2->printDetails();
+
     // TODO (Part E): Use largerValue with two int values and with two double values.
     // Print each result with a descriptive English label.
-
+    int int1 = 10, int2 = 20;   
     return 0;
 }

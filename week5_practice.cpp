@@ -74,12 +74,13 @@ int main() {
     LimitedEvent limitedEvent("Workshop", 25);
     CampusEvent* eventPtr2 = &limitedEvent;
 
-    cout << "--- Derived event ---" << endl;
+    cout << "--- Polymorphism ---" << endl;
     eventPtr1->printDetails();
     eventPtr2->printDetails();
 
     // TODO (Part E): Use largerValue with two int values and with two double values.
     // Print each result with a descriptive English label.
-    int int1 = 10, int2 = 20;   
+
+
     return 0;
 }
